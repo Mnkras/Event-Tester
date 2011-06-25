@@ -16,7 +16,7 @@ class EventTester {
 			$count = $i+1;
 			if(!is_object($arg_list[$i])) {
         		$l->write("Argument $count: " . $arg_list[$i]);
-        	} else {
+			} else {
         		$l->write("Argument $count: " . print_r($arg_list[$i], true));
         	}
         	$i++;
