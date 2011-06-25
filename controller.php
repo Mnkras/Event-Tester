@@ -22,8 +22,8 @@ class EventTesterPackage extends Package {
 	
 	public function on_start() {
 		//has on_start, on_page_view, on_before_render, and on_render_complete
-		//$events = array('on_start', 'on_before_render', 'on_render_complete', 'on_group_delete', 'on_page_update', 'on_page_move', 'on_page_duplicate', 'on_page_delete', 'on_page_add', 'on_page_view', 'on_page_version_approve', 'on_user_delete', 'on_user_update', 'on_user_login');
-		$events = array('on_group_delete', 'on_page_update', 'on_page_move', 'on_page_duplicate', 'on_page_delete', 'on_page_add', 'on_page_version_approve', 'on_user_delete', 'on_user_update', 'on_user_login');
+		$events = array('on_start', 'on_before_render', 'on_render_complete', 'on_group_delete', 'on_page_update', 'on_page_move', 'on_page_duplicate', 'on_page_delete', 'on_page_add', 'on_page_view', 'on_page_version_approve', 'on_user_delete', 'on_user_update', 'on_user_login');
+		//$events = array('on_group_delete', 'on_page_update', 'on_page_move', 'on_page_duplicate', 'on_page_delete', 'on_page_add', 'on_page_version_approve', 'on_user_delete', 'on_user_update', 'on_user_login');
 		
 		foreach($events as $event) {
 			Events::extend($event, 'EventTester', 'testEvent', DIR_PACKAGES.'/'.$this->pkgHandle.'/'.DIRNAME_MODELS.'/'.$this->pkgHandle.'.php', array($event));
