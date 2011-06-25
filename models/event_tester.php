@@ -14,7 +14,7 @@ class EventTester {
 		$i = 0;
 		foreach($arg_list as $thing){
 			$count = $i+1;
-			if(!is_object($arg_list[$i])) {
+			if(is_string($arg_list[$i])|| is_boolean($arg_list[$i])) {
 				$l->write("Argument $count: " . $arg_list[$i]);
 			} else {
 				$l->write("Argument $count: " . print_r($arg_list[$i], true));
