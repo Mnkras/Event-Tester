@@ -2,36 +2,20 @@
 
 class EventTester {
 
-	public function testOnStart() {
+	public function testEvent($event) {
+		$arg_list = func_get_args();
+		$l = new Log('event_tester', true);
+		$l->write('===Event Tester===');
+		$l->write('');
+		$numargs = func_num_args();
+		for ($i = 0; $i < $numargs; $i++) {
+			if(!is_object($arg_list[$i])) {
+        		$l->write("Argument $i: " . $arg_list[$i]);
+        	} else {
+        		$l->write("Argument $i: " . print_r($arg_list[$i], true));
+        	}
+   		}
+		$l->close();
 	}
-	public function testOnBeforeRender() {
-	}
-	public function testOnRenderComplete() {
-	}
-	public function testOnGroupDelete() {
-	}
-	public function testOnPageUpdate() {
-	}
-	public function testOnPageMove() {
-	}
-	public function testOnPageDuplicate() {
-	}
-	public function testOnPageDelete() {
-	}
-	public function testOnPageAdd() {
-	}
-	public function testOnPageView() {
-	}
-	public function testOnPageVersionApprove() {
-	}
-	public function testOnUserAdd() {
-	}
-	public function testOnUserDelete() {
-	}
-	public function testOnUserUpdate() {
-	}
-	public function testOnUserLogin() {
-	}
-}
 
-?>
+}
