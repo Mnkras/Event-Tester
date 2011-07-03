@@ -68,7 +68,7 @@
 					
 					<a name="credits"></a>
 					<h2><?php echo t('Credits')?></h2>
-					<p><?php echo t('Michael Krasnow of <a href="http://c5rockstars.com">c5Rockstars</a> is the author of the Event Tester.<br /><a href="http://www.concrete5.org/profile/-/46463/">Check out some of our other stuff</a>.')?></p>
+					<p><?php echo t('Michael Krasnow of <a href="http://c5rockstars.com">C5 Rockstars</a> is the author of the Event Tester.<br /><a href="http://www.concrete5.org/profile/-/46463/">Check out some of our other stuff</a>.')?></p>
 				
 				</td>			
 				<td width="200" valign="top" align="left" style="border-left: 1px solid #cccccc;">
