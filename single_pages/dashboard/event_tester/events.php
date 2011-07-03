@@ -12,7 +12,7 @@ Loader::model('event_tester', 'event_tester');
 $valt = Loader::helper('validation/form');
 $val = Loader::helper('validation/token');
 ?>
-<div style="width: 680px">
+<div>
 	<h1><span><?php echo t('Event Tester')?></span></h1>
 	<div class="ccm-dashboard-text">
 		<table class="grid-list" width="100%" cellspacing="1" cellpadding="0" border="0">	
