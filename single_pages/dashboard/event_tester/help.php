@@ -17,9 +17,10 @@
 		});
 		
 		$( ".contents" ).click(function() {
+			$('html,body').animate({scrollTop:$(this.hash).offset().top}, 1000);
 			var name = $(this).attr('href');
-			$(name).effect( 'highlight', {}, 1000);
-			return true;
+			$(name).effect( 'highlight', {}, 3000);
+			return false;
 		});
 	});
 </script>
