@@ -37,6 +37,12 @@ class EventTesterPackage extends Package {
 		}
 	}
 	
+	public function uninstall() {
+		parent::uninstall();
+		$db = Loader::db();
+		$db->Execute('DROP TABLE IF EXISTS `EventTesterEvents`');//remove everthing!
+	}
+	
 	public function on_start() {
 	
 		$defaultevents = array();
@@ -2111,11 +2117,5 @@ class EventTesterPackage extends Package {
 				}
 			}
 		}
-	}
-	
-	public function uninstall() {
-		parent::uninstall();
-		$db = Loader::db();
-		$db->Execute('DROP TABLE IF EXISTS `EventTesterEvents`');//remove everthing!
 	}
 }
