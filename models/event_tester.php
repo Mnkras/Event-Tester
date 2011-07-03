@@ -28,7 +28,12 @@ class EventTester extends Object{
 		}
 		$l->close();
 	}
-	
+
+	/**
+	 * Add a new event to be logged
+	 * @param string $event
+	 * @return EventTester
+	 */	
 	public function add($event) {
 		if(!self::eventExists($event)) {
 			$db = Loader::db();
@@ -38,7 +43,11 @@ class EventTester extends Object{
 		}
 		throw new Exception(t('An event with that name already exists!'));
 	}
-	
+
+	/**
+	 * Delete an event from being logged
+	 * @return void
+	 */	
 	public function delete() {
 		if($this->ID) {
 			$db = Loader::db();
@@ -47,9 +56,9 @@ class EventTester extends Object{
 	}
 	
 	/**
-	 * Get the object for a social network by handle
-	 * @param string $handle
-	 * @return Social
+	 * Get the object for an event
+	 * @param string $event
+	 * @return EventTester
 	 */
 	public function getByEvent($event) {
 		$db = Loader::db();
@@ -61,9 +70,9 @@ class EventTester extends Object{
 	}
 	
 	/**
-	 * Get the object for a social network by id
-	 * @param string $sID
-	 * @return Social
+	 * Get the object for an event by id
+	 * @param string $ID
+	 * @return EventTester
 	 */
 	public function getByID($ID) {
 		$db = Loader::db();
@@ -96,8 +105,8 @@ class EventTester extends Object{
 	public function getEvent() {return $this->event;}
 	
 	/**
-	 * Get a list of all the social network object
-	 * @return array $networks
+	 * Get a list of all the event objects
+	 * @return array $events
 	 */
 	public function getEventList() {
 		$db = Loader::db();
