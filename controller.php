@@ -61,7 +61,7 @@ class EventTesterPackage extends Package {
 			 */
 			//has on_page_get_icon, on_start, on_page_view, on_before_render, and on_render_complete
 			//$misc_events = array('on_page_get_icon', 'on_start', 'on_before_render', 'on_render_complete', 'on_page_view');
-			$misc_events = array('on_page_view');
+			$misc_events = array();
 			$page_events = array('on_page_update', 'on_page_move', 'on_page_duplicate', 'on_page_delete', 'on_page_add', 'on_page_version_approve', 'on_page_version_add');
 			$user_events = array('on_user_add', 'on_user_delete', 'on_user_update', 'on_user_login', 'on_user_change_password');
 			$group_events = array('on_group_delete');
