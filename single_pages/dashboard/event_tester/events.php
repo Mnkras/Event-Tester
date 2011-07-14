@@ -1,11 +1,15 @@
 <?php defined('C5_EXECUTE') or die("Access Denied.");
+
 /**
+ *
  * @package Event Tester
- * @category Single Page
- * @author Michael Krasnow <mike@c5rockstars.com>
- * @copyright  Copyright (c) 2010-2011 C5Rockstars. (http://www.c5rockstars.com)
- * @license    http://www.concrete5.org/license/     MIT License
+ * @category Packages
+ * @author Michael Krasnow <mnkras@gmail.com>
+ * @copyright  Copyright (c) 2011 Michael Krasnow. (http://www.mnkras.com)
+ * @license    see LICENSE.txt
+ *
  */
+ 
 $ih = Loader::helper('concrete/interface');
 $form = Loader::helper('form');
 Loader::model('event_tester', 'event_tester');
