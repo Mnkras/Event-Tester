@@ -78,7 +78,7 @@
 					<div id="support">
 						<a name="support"></a>
 						<h2><?php echo t('Support')?></h2>
-						<p><?php echo t('For support please submit a support ticked on the addon\'s page located here: <a href="http://www.concrete5.org/marketplace/addons/event_tester/">Event Tester</a>.')?></p>
+						<p><?php echo t('For support please submit a support ticked on the addon\'s page located here: <a href="http://www.concrete5.org/marketplace/addons/event-tester/">Event Tester</a>.')?></p>
 					</div>
 					
 					<br />
@@ -86,7 +86,7 @@
 					<div id="credits">
 						<a name="credits"></a>
 						<h2><?php echo t('Credits')?></h2>
-						<p><?php echo t('Michael Krasnow of <a href="http://c5rockstars.com">C5 Rockstars</a> is the author of the Event Tester.<br /><a href="http://www.concrete5.org/profile/-/46463/">Check out some of our other stuff</a>.')?></p>
+						<p><?php echo t('Michael Krasnow is the author of the Event Tester.<br /><a href="http://www.concrete5.org/profile/-/781/">Check out some of my other stuff</a>! Donations are welcome.')?></p>
 					</div>
 				
 				</td>			
