@@ -901,7 +901,7 @@ $defaultevents[] = array('event' => 'on_user_add',
 )')
 						);
 $defaultevents[] = array('event' => 'on_user_delete',
-						'description' => 'Fires when a user is being deleted. Can be cancelled by returning false. If a function hooks into this event, the function is passed the user to be deleted as the argument (a UserInfo object.)',
+						'description' => 'Fires when a user is being deleted. Can be cancelled by returning -1. If a function hooks into this event, the function is passed the user to be deleted as the argument (a UserInfo object.)',
 						'examples' =>
 							array('UserInfo Object
 (

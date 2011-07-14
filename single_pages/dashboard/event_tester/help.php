@@ -42,7 +42,7 @@
 					</div>
 					<br />
 					
-					<div id="events">
+					<div style="width:679px;" id="events">
 						<a name="events"></a>
 						<h2><?php echo t('Default concrete5 Events')?></h2>
 						<div class="events_acc">
@@ -78,7 +78,7 @@
 					<div id="support">
 						<a name="support"></a>
 						<h2><?php echo t('Support')?></h2>
-						<p><?php echo t('For support please submit a support ticked on the addon\'s page located here: <a href="http://www.concrete5.org/marketplace/addons/event-tester/">Event Tester</a>.')?></p>
+						<p><?php echo t('For support please submit a support ticked on the addon\'s page located here: <a target="_blank" href="http://www.concrete5.org/marketplace/addons/event-tester/">Event Tester</a>.')?></p>
 					</div>
 					
 					<br />
@@ -86,7 +86,7 @@
 					<div id="credits">
 						<a name="credits"></a>
 						<h2><?php echo t('Credits')?></h2>
-						<p><?php echo t('Michael Krasnow is the author of the Event Tester.<br /><a href="http://www.concrete5.org/profile/-/781/">Check out some of my other stuff</a>! Donations are welcome.')?></p>
+						<p><?php echo t('Michael Krasnow is the author of the Event Tester.<br /><a target="_blank" href="http://www.concrete5.org/profile/-/781/">Check out some of my other stuff</a>! Donations are welcome.')?></p>
 					</div>
 				
 				</td>			
