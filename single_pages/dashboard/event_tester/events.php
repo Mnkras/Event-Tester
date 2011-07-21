@@ -54,7 +54,7 @@ $val = Loader::helper('validation/token');
 	</div>
 	<h1><span><?php echo t('Add New Event')?></span></h1>
 	<div class="ccm-dashboard-inner">
-		<form method="post" action="<?=$this->action('add_new_event')?>" id="event-tester-add-form">
+		<form method="post" action="<?php echo $this->action('add_new_event')?>" id="event-tester-add-form">
 			<?php echo $this->controller->token->output('add_new_event');?>
 			<div class="ccm-dashboard-text">
 				<?php
