@@ -15,11 +15,19 @@ $form = Loader::helper('form');
 Loader::model('event_tester', 'event_tester');
 $valt = Loader::helper('validation/form');
 $val = Loader::helper('validation/token');
-?>
-<div>
-	<h1><span><?php echo t('Event Tester')?></span></h1>
-	<div class="ccm-dashboard-text">
-		<table class="grid-list" width="100%" cellspacing="1" cellpadding="0" border="0">	
+
+echo Loader::helper('concrete/dashboard')->getDashboardPaneHeaderWrapper(t('Event Tester'), false, 'span6 offset5');?>
+	<div class="clearfix">
+		<h3><?php echo t('Add Event')?></h3>
+		<form class="form-stacked" method="post" id="add_event" action="<?php echo $this->action('add_new_event')?>">
+			<?php echo $this->controller->token->output('add_new_event')?>
+			<label for="event"><?php echo t('Event')?>:</label>
+			<input type="text" id="event" name="event" class="span4" />
+			<span class="help-block"><?php echo t('(eg. on_user_login)')?></span>
+			<?php print $ih->submit(t('Save'), 'add_event', 'left', 'primary');?>
+
+		</form>
+		<table class="zebra-striped" cellspacing="1" cellpadding="0" border="0">	
 			<tbody>
 				<tr>
 					<td class="subheader"><strong><?php echo t('Event')?></strong></td>
@@ -28,21 +36,20 @@ $val = Loader::helper('validation/token');
 		<?php
 		if(count($events) > 0) {
 			foreach($events as $event) {
-				$delete = $ih->button_js(t('Delete'), 'delete_confirm(\''.$event->getEvent().'\', \''.$event->getID().'\')', 'left');
+				$delete = $ih->button_js(t('Delete'), 'delete_confirm(\''.$event->getEvent().'\', \''.$event->getID().'\')', 'left', 'danger');
 				echo '<tr>'."\n";
 					echo '<td><strong>'.$event->getEvent().':</strong></td>'."\n";
-					echo '<td>'.$ih->buttons($delete).'</td>'."\n";
+					echo '<td>'.$delete.'</td>'."\n";
 				echo '</tr>'."\n";			
 			}
 		} else {
-			echo '<tr><td colspan="3">'.t('There are no events to display.').'</td></tr>';
+			echo '<tr><td colspan="2">'.t('There are no events to display.').'</td></tr>';
 		}
 		
 		?>		
 			</tbody>
 		</table>
 		<br />
-		<div class="ccm-spacer">&nbsp;</div>		
 		<script type="text/javascript">
 			delete_confirm = function(event, ID) {
 				if (confirm('<?php echo t("Are you sure you want to delete the event \"%s\"?", "' + event + '")?>')) {
@@ -52,18 +59,4 @@ $val = Loader::helper('validation/token');
 		</script>
 		</div>
 	</div>
-	<h1><span><?php echo t('Add New Event')?></span></h1>
-	<div class="ccm-dashboard-inner">
-		<form method="post" action="<?php echo $this->action('add_new_event')?>" id="event-tester-add-form">
-			<?php echo $this->controller->token->output('add_new_event');?>
-			<div class="ccm-dashboard-text">
-				<?php
-					echo '<label for="event"><strong>'.t('Event').':</strong><div class="ccm-dashboard-description">'.t('(eg. on_user_login)').'</div></label>';
-					echo $form->text('event');
-					echo '<div class="ccm-spacer">&nbsp;</div>';
-					echo $ih->submit(t('Save New Event'), 'event-tester-add-form', 'left');
-				?>
-			</div>
-		</form>		
-	</div>
-</div>
+<?php echo Loader::helper('concrete/dashboard')->getDashboardPaneFooterWrapper(false);

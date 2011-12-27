@@ -10,7 +10,7 @@
  *
  */
  
-class DashboardEventTesterController extends Controller { 	 
+class DashboardEventTesterController extends DashboardBaseController { 	 
 	
 	function __construct() {  
 		$this->redirect('/dashboard/event_tester/events');

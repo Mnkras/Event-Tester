@@ -12,10 +12,10 @@
  
 Loader::model('event_tester', 'event_tester');
 
-class DashboardEventTesterEventsController extends Controller { 	
+class DashboardEventTesterEventsController extends DashboardBaseController { 	
 
 	public function on_start() {
-		$this->token = Loader::helper('validation/token');
+		parent::on_start();
 		$this->set('events', EventTester::getEventList());
 	}	
 	

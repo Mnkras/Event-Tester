@@ -14,8 +14,8 @@ defined('C5_EXECUTE') or die("Access Denied.");
 class EventTesterPackage extends Package {
 
 	protected $pkgHandle = 'event_tester';
-	protected $appVersionRequired = '5.4.1.1';
-	protected $pkgVersion = '1.0';
+	protected $appVersionRequired = '5.5.0';
+	protected $pkgVersion = '2.0';
 	
 	public function getPackageName() {
 		return t("Event Tester");

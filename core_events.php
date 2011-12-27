@@ -13,7 +13,7 @@ defined('C5_EXECUTE') or die("Access Denied.");
  
 $defaultevents = array();
 
-$defaultevents[] = array('event' => 'on_page_update',
+$defaultevents['pages'][] = array('event' => 'on_page_update',
 						'description' => 'Fires when a page is updated. If a function hooks into this event, the function is passed the page being updated as the argument.',
 						'examples' =>
 							array('Page Object
@@ -97,7 +97,7 @@ $defaultevents[] = array('event' => 'on_page_update',
 
 )')
 						);
-$defaultevents[] = array('event' => 'on_page_move',
+$defaultevents['pages'][] = array('event' => 'on_page_move',
 						'description' => 'Fires when a page is moved. Functions hooking into this event are passed three arguments: the first is the page being moved, the second is the old parent page, and the third is the new parent page.',
 						'examples' =>
 							array('Page Object
@@ -344,7 +344,7 @@ $defaultevents[] = array('event' => 'on_page_move',
 
 )')
 						);
-$defaultevents[] = array('event' => 'on_page_duplicate',
+$defaultevents['pages'][] = array('event' => 'on_page_duplicate',
 						'description' => 'Fires when a page is copied. Functions hooking into this event are passed two arguments: the first is the new parent, the second is the current page.',
 						'examples' =>
 							array('Page Object
@@ -513,7 +513,7 @@ $defaultevents[] = array('event' => 'on_page_duplicate',
 
 )')
 						);
-$defaultevents[] = array('event' => 'on_page_delete',
+$defaultevents['pages'][] = array('event' => 'on_page_delete',
 						'description' => 'Fires when a page is being deleted. Can be cancelled by returning -1. If a function hooks into this event, the function is passed the page to be deleted as the argument.',
 						'examples' =>
 							array('Page Object
@@ -597,7 +597,7 @@ $defaultevents[] = array('event' => 'on_page_delete',
 
 )')
 						);
-$defaultevents[] = array('event' => 'on_page_add',
+$defaultevents['pages'][] = array('event' => 'on_page_add',
 						'description' => 'Fires when a page is being added. If a function hooks into this event, the function is passed the new page object as the argument. This happens immediately after a page is added.',
 						'examples' =>
 							array('Page Object
@@ -677,7 +677,7 @@ $defaultevents[] = array('event' => 'on_page_add',
 
 )')
 						);
-$defaultevents[] = array('event' => 'on_page_version_approve',
+$defaultevents['pages'][] = array('event' => 'on_page_version_approve',
 						'description' => 'Fires when a page\'s version is approved. Passes an additional page object, containing the approved version.',
 						'examples' =>
 							array('Page Object
@@ -762,7 +762,7 @@ $defaultevents[] = array('event' => 'on_page_version_approve',
 
 )')
 						);
-$defaultevents[] = array('event' => 'on_page_version_add',
+$defaultevents['pages'][] = array('event' => 'on_page_version_add',
 						'description' => '',
 						'examples' =>
 							array('Page Object
@@ -878,7 +878,7 @@ $defaultevents[] = array('event' => 'on_page_version_add',
 )')
 						);
 
-$defaultevents[] = array('event' => 'on_user_add',
+$defaultevents['users'][] = array('event' => 'on_user_add',
 						'description' => 'Fires when a user is being added. Functions hooking into this event receive the newly added UserInfo object as their one argument.',
 						'examples' =>
 							array('UserInfo Object
@@ -900,7 +900,7 @@ $defaultevents[] = array('event' => 'on_user_add',
 [uTimezone] => 
 )')
 						);
-$defaultevents[] = array('event' => 'on_user_delete',
+$defaultevents['users'][] = array('event' => 'on_user_delete',
 						'description' => 'Fires when a user is being deleted. Can be cancelled by returning -1. If a function hooks into this event, the function is passed the user to be deleted as the argument (a UserInfo object.)',
 						'examples' =>
 							array('UserInfo Object
@@ -922,7 +922,7 @@ $defaultevents[] = array('event' => 'on_user_delete',
 [uTimezone] => 
 )')
 						);
-$defaultevents[] = array('event' => 'on_user_update',
+$defaultevents['users'][] = array('event' => 'on_user_update',
 						'description' => 'Fires when a user is being updated. If a function hooks into this event, the function is passed the user to be updated as the argument (a UserInfo object.) IMPORTANT NOTE - When hooking into deletion events, if your function returns false, the deletion will NOT continue. In this way, you can use custom code to stop people from deleting content.',
 						'examples' =>
 							array('UserInfo Object
@@ -944,7 +944,7 @@ $defaultevents[] = array('event' => 'on_user_update',
 [uTimezone] => 
 )')
 						);
-$defaultevents[] = array('event' => 'on_user_login',
+$defaultevents['users'][] = array('event' => 'on_user_login',
 						'description' => 'Fires when a user logs in via the /login page (NOTE: this does NOT fire when a user is logged in programmatically.)',
 						'examples' =>
 							array('LoginController Object
@@ -1080,7 +1080,7 @@ $defaultevents[] = array('event' => 'on_user_login',
 
 )')
 						);
-$defaultevents[] = array('event' => 'on_user_change_password',
+$defaultevents['users'][] = array('event' => 'on_user_change_password',
 						'description' => 'Fires when a user changes their profile, the first argument is a user object, and the second is the password in plaintext.',
 						'examples' =>
 							array('UserInfo Object
@@ -1104,7 +1104,7 @@ $defaultevents[] = array('event' => 'on_user_change_password',
 							'thisismynewpassword')
 						);
 
-$defaultevents[] = array('event' => 'on_group_delete',
+$defaultevents['groups'][] = array('event' => 'on_group_delete',
 						'description' => 'Fires when a group is deleted. Can be cancelled by returning false. If a function hooks into this event, the function is passed the group to be deleted as the argument.',
 						'examples' =>
 							array('Group Object
@@ -1127,7 +1127,7 @@ $defaultevents[] = array('event' => 'on_group_delete',
 )')
 						);
 
-$defaultevents[] = array('event' => 'on_page_get_icon',
+$defaultevents['misc'][] = array('event' => 'on_page_get_icon',
 						'description' => 'Fires when a pagetype icon is loaded (when adding a page this will fire several times).',
 						'examples' =>
 							array('Page Object
@@ -1208,7 +1208,7 @@ $defaultevents[] = array('event' => 'on_page_get_icon',
 [cIndexScore] => 
 )')
 						);
-$defaultevents[] = array('event' => 'on_start',
+$defaultevents['misc'][] = array('event' => 'on_start',
 						'description' => 'Fired when concrete5 starts up.',
 						'examples' =>
 							array('View Object
@@ -1236,7 +1236,7 @@ $defaultevents[] = array('event' => 'on_start',
 [error] => 
 )')
 						);
-$defaultevents[] = array('event' => 'on_page_view',
+$defaultevents['pages'][] = array('event' => 'on_page_view',
 						'description' => 'Fires when a page is being viewed. If a function hooks into this event, the function is passed two arguments: the first is the page being viewed, the second is the user object viewing it. User object could be unregistered/anonymous. Note: if statistics are disabled this event will never fire.',
 						'examples' =>
 							array('Page Object
@@ -1331,7 +1331,7 @@ $defaultevents[] = array('event' => 'on_page_view',
 [error] => 
 )')
 						);
-$defaultevents[] = array('event' => 'on_before_render',
+$defaultevents['misc'][] = array('event' => 'on_before_render',
 						'description' => 'Fires immediately before rendering the entire page. If a function hooks into this event, the function is passed the page being rendered as the argument.',
 						'examples' =>
 							array('View Object
@@ -1590,7 +1590,7 @@ $defaultevents[] = array('event' => 'on_before_render',
 [themePkgID] => 0
 )')
 						);
-$defaultevents[] = array('event' => 'on_render_complete',
+$defaultevents['misc'][] = array('event' => 'on_render_complete',
 						'description' => 'Fires immediately after rendering the entire page. If a function hooks into this event, the function is passed the page being rendered as the argument.',
 						'examples' =>
 							array('View Object
