@@ -15,7 +15,7 @@ class EventTesterPackage extends Package {
 
 	protected $pkgHandle = 'event_tester';
 	protected $appVersionRequired = '5.5.0';
-	protected $pkgVersion = '2.0';
+	protected $pkgVersion = '2.1';
 	
 	public function getPackageName() {
 		return t("Event Tester");
