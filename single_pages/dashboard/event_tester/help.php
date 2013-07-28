@@ -11,7 +11,7 @@
  */
  
 
-echo Loader::helper('concrete/dashboard')->getDashboardPaneHeaderWrapper(t('Event Tester Help'), false, 'span16');?>
+echo Loader::helper('concrete/dashboard')->getDashboardPaneHeaderWrapper(t('Event Tester Help'), false, '');?>
 	<div class="row">
 		<div class="span11">
 			<div id="use">
@@ -79,8 +79,8 @@ echo Loader::helper('concrete/dashboard')->getDashboardPaneHeaderWrapper(t('Even
 			</div>
 		</div>
 				
-		<div class="span3" valign="top" align="left">
-			<div class="well" style="position:fixed;">
+		<div class="span4" valign="top" align="left">
+			<div class="well">
 				<h2><?php echo t('Table of Contents')?></h2>
 				<ul>
 					<li><a class="contents" href="#use"><?php echo t('How to Use the Event Tester')?></a></li>

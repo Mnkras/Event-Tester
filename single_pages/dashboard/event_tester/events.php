@@ -16,7 +16,7 @@ Loader::model('event_tester', 'event_tester');
 $valt = Loader::helper('validation/form');
 $val = Loader::helper('validation/token');
 
-echo Loader::helper('concrete/dashboard')->getDashboardPaneHeaderWrapper(t('Event Tester'), false, 'span6 offset5');?>
+echo Loader::helper('concrete/dashboard')->getDashboardPaneHeaderWrapper(t('Event Tester'), false, '');?>
 	<div class="clearfix">
 		<h3><?php echo t('Add Event')?></h3>
 		<form class="form-stacked" method="post" id="add_event" action="<?php echo $this->action('add_new_event')?>">
